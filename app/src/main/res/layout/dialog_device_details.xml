@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="@drawable/divider_vertical_32dp"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:showDividers="middle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divider_horizontal_16dp"
+        android:orientation="horizontal"
+        android:showDividers="middle">
+
+        <FrameLayout
+            android:id="@+id/containerIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/outline_rounded_4dp"
+            android:backgroundTint="@color/darkGrey"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?selectableItemBackground"
+            android:outlineProvider="background"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageIcon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="4dp"
+                android:src="@drawable/icon_light1"
+                android:tint="@color/darkGrey" />
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/outline_rounded_4dp"
+            android:backgroundTint="@color/darkGrey"
+            android:gravity="center_vertical"
+            android:hint="@string/light_s_name"
+            android:inputType="textAutoComplete|textAutoCorrect|textCapWords"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:textColor="@color/darkGrey"
+            android:textColorHint="@color/grey" />
+
+    </LinearLayout>
+
+    <com.pointlessapps.lightsout.SliderView
+        android:id="@+id/sliderBrightness"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:color="@color/blue"
+        android:colorBackground="@color/lightGrey"
+        android:fontFamily="@font/montserrat_bold"
+        android:paddingHorizontal="10dp"
+        android:radius="4dp"
+        android:text="@string/brightness"
+        android:textSize="18sp"
+        android:value="50%" />
+
+    <com.pointlessapps.lightsout.SliderView
+        android:id="@+id/sliderHue"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:color="@color/blue"
+        android:colorBackground="@color/lightGrey"
+        android:fontFamily="@font/montserrat_bold"
+        android:paddingHorizontal="10dp"
+        android:radius="4dp"
+        android:text="@string/hue"
+        android:textSize="18sp"
+        android:value="126" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.3"
+        android:clickable="false"
+        android:divider="@drawable/divider_vertical_16dp"
+        android:focusable="false"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/automation"
+                android:textSize="18sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/switch_off"
+                android:tint="@color/darkGrey" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/automation_sample"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divider_horizontal_16dp"
+        android:showDividers="middle">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonRemove"
+            style="@style/Button"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/remove"
+            android:textColor="@color/darkGrey"
+            app:icon="@drawable/icon_trash"
+            app:iconTint="@color/darkGrey"
+            app:rippleColor="?android:colorControlHighlight" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSave"
+            style="@style/Button"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/save"
+            android:textColor="@color/darkGrey"
+            app:icon="@drawable/icon_save"
+            app:iconTint="@color/darkGrey"
+            app:rippleColor="?android:colorControlHighlight" />
+
+    </LinearLayout>
+
+</LinearLayout>

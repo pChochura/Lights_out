@@ -1,0 +1,36 @@
+<resources>
+
+    <style name="Theme.LightsOut" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/lightGrey</item>
+        <item name="colorOnPrimary">@color/darkGrey</item>
+        <item name="colorAccent">@color/blue</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textColorPrimary">@color/darkGrey</item>
+        <item name="android:textColorSecondary">@color/grey</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="bottomSheetDialogTheme">@style/CustomBottomSheetDialog</item>
+    </style>
+
+    <style name="Button" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/darkGrey</item>
+    </style>
+
+    <style name="CustomBottomSheetDialog" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheet</item>
+    </style>
+
+    <style name="CustomBottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/CustomShapeAppearanceBottomSheetDialog</item>
+    </style>
+
+    <style name="CustomShapeAppearanceBottomSheetDialog" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+</resources>

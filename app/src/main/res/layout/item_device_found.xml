@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/outline_rounded_4dp"
+    android:backgroundTint="@color/darkGrey"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?selectableItemBackground"
+    android:outlineProvider="background"
+    tools:ignore="SpeakableTextPresentCheck">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageIcon"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:padding="16dp"
+        android:src="@drawable/icon_light2"
+        android:tint="@color/darkGrey" />
+
+</FrameLayout>

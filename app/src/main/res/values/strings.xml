@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Lights out</string>
+    <string name="devices">Devices</string>
+    <string name="let_there_be_light">Let there be light!</string>
+    <string name="light_s_name">Light\'s name</string>
+    <string name="brightness">Brightness</string>
+    <string name="hue">Hue</string>
+    <string name="automation_sample">Turn on automatically every <b>mon-fri</b> until <b>turned off</b> between <b>9:00</b> and <b>13:00</b></string>
+    <string name="remove">Remove</string>
+    <string name="save">Save</string>
+    <string name="automation">Automation</string>
+    <string name="add_a_new_device">Add a new device</string>
+    <string name="connect">Connect</string>
+    <string name="wiz_pro">Wiz PRO</string>
+    <string name="cancel">Cancel</string>
+    <string name="done">Done</string>
+    <string name="add_a_room">Add a room</string>
+    <string name="room_s_name">Room\'s name</string>
+    <string name="do_you_want_to_remove_this_room">Do you want to remove this room?</string>
+    <string name="do_you_want_to_remove_this_device">Do you want to remove this device?</string>
+</resources>

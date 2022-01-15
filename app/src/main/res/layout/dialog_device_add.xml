@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="@drawable/divider_vertical_32dp"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:showDividers="middle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divider_horizontal_16dp"
+        android:orientation="horizontal"
+        android:showDividers="middle">
+
+        <FrameLayout
+            android:id="@+id/containerIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/outline_rounded_4dp"
+            android:backgroundTint="@color/darkGrey"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?selectableItemBackground"
+            android:outlineProvider="background"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageIcon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="4dp"
+                android:src="@drawable/icon_light1"
+                android:tint="@color/darkGrey" />
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/outline_rounded_4dp"
+            android:backgroundTint="@color/darkGrey"
+            android:gravity="center_vertical"
+            android:hint="@string/light_s_name"
+            android:inputType="textAutoComplete|textAutoCorrect|textCapWords"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:textColor="@color/darkGrey"
+            android:textColorHint="@color/grey" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/containerProviders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divider_vertical_8dp"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/connect"
+            android:textColor="@color/grey"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonConnectWiz"
+            style="@style/Button"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/wiz_pro"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/darkGrey"
+            android:textSize="18sp"
+            app:icon="@drawable/ic_provider_wiz"
+            app:iconGravity="end"
+            app:iconSize="48dp"
+            app:iconTint="@color/darkGrey"
+            app:rippleColor="?android:colorControlHighlight" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/containerDevices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divider_vertical_8dp"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/devices"
+            android:textColor="@color/grey"
+            android:textSize="14sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listDevices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_device_found" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divider_horizontal_16dp"
+        android:showDividers="middle">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonCancel"
+            style="@style/Button"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/cancel"
+            android:textColor="@color/darkGrey"
+            app:icon="@drawable/icon_cancel"
+            app:iconTint="@color/darkGrey"
+            app:rippleColor="?android:colorControlHighlight" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonDone"
+            style="@style/Button"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/done"
+            android:textColor="@color/darkGrey"
+            app:icon="@drawable/icon_done"
+            app:iconTint="@color/darkGrey"
+            app:rippleColor="?android:colorControlHighlight" />
+
+    </LinearLayout>
+
+</LinearLayout>
